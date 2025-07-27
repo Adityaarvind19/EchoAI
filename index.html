@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CHATBOT</title>
+
+  <!-- Fonts & Styles -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ✅ Sidebar for Chat History -->
+  <div class="sidebar">
+    <button id="new-chat-btn">
+      <span class="material-symbols-rounded">add</span> New Chat
+    </button>
+
+    <div class="chat-history">
+      <!-- Example chat titles -->
+      <div class="chat-item">Chat 1</div>
+      <div class="chat-item">Chat 2</div>
+    </div>
+  </div>
+
+  <!-- ✅ Main Chatbot Container -->
+  <div class="container">
+    <header class="app-header">
+      <h1 class="heading">Hello, there</h1>
+      <h2 class="sub-heading">How can I help you!</h2>
+    </header>
+
+    <!-- Suggested prompts -->
+    <ul class="suggestions">
+      <li class="suggestions-item">
+        <p class="text">Design a home office setup for remote work</p>
+        <span class="material-symbols-rounded">draw</span>
+      </li>
+      <li class="suggestions-item">
+        <p class="text">How can I level up my web development</p>
+        <span class="material-symbols-rounded">lightbulb</span>
+      </li>
+      <li class="suggestions-item">
+        <p class="text">Suggest some useful tools for debugging javascript</p>
+        <span class="material-symbols-rounded">explore</span>
+      </li>
+      <li class="suggestions-item">
+        <p class="text">Create a react js component for the simple todo list app</p>
+        <span class="material-symbols-rounded">codeblock</span>
+      </li>
+    </ul>
+
+    <!-- Chat output -->
+    <div class="chats-container"></div>
+
+    <!-- Prompt input area -->
+    <div class="prompt-container">
+      <div class="prompt-wrapper">
+        <form action="#" class="prompt-form">
+          <input type="text" placeholder="Ask Echo" class="prompt-input" required />
+          <div class="prompt-actions">
+            <div class="file-upload-wrapper">
+              <img src="#" class="file-preview" />
+              <input type="file" accept="image/*, .pdf, .txt, .csv" id="file-input" hidden />
+              <button type="button" class="file-icon material-symbols-rounded">description</button>
+              <button id="add-file-btn" type="button" class="material-symbols-rounded">attach_file</button>
+              <button id="cancel-file-btn" type="button" class="material-symbols-rounded">close</button>
+            </div>
+
+            <button type="button" id="stop-response-btn" class="material-symbols-rounded">stop_circle</button>
+            <button id="send-prompt-btn" class="material-symbols-rounded">arrow_upward</button>
+          </div>
+        </form>
+
+        <!-- Footer controls -->
+        <button id="theme-toggle-btn" class="material-symbols-rounded">light_mode</button>
+        <button id="delete-chats-btn" class="material-symbols-rounded">delete</button>
+      </div>
+
+      <p class="disclaimer-text">EchoAI can make mistakes, so double check</p>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
